@@ -1,0 +1,80 @@
+.loading{
+    height: 100vh;
+    width: 100%;
+    z-index: 9999;
+    background: white url('../91.gif') center no-repeat;
+}
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Merienda One", cursive;
+  letter-spacing: 3px;
+  background: linear-gradient(-45deg, #e9b9bb, #c7216e, #3268a9, #56158b);
+  background-size: 400% 400%;
+  animation-name: bga;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+@keyframes bga{
+    0%{background-position: 0% 50%;}    
+    50%{background-position: 50% 100%;}    
+    100%{background-position: 0% 50%;}    
+}
+i {
+  font-size: 350px;
+  animation-name: shake;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  color: orange;
+  text-shadow: 10px 5px #767676;
+  transition-property: all;
+  transition-duration: 3s;
+}
+i:hover {
+  color: yellow;
+}
+@keyframes shake {
+  0% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
+h1 {
+  font-size: 70px;
+  padding: 0;
+  margin: 0;
+}
+.glow {
+  color: #fff;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #e60073, 0 0 20px #e60073,
+      0 0 25px #e60073, 0 0 30px #e60073, 0 0 35px #e60073;
+  }
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 15px #ff4da6, 0 0 20px #ff4da6,
+      0 0 25px #ff4da6, 0 0 30px #ff4da6, 0 0 35px #ff4da6, 0 0 40px #ff4da6;
+  }
+}
+@media only screen and (max-width: 500px) {
+  i {
+    font-size: 250px;
+    margin: 0;
+    padding: 0;
+  }
+}
