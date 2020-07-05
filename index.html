@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/fontawesome.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merienda+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body onload="hidepre()">
+    <div class="loading"></div>
+    <i class="fa fa-gift"></i>
+    <div id="wishes">
+      <h1 class="glow">Happy Bithday</h1>
+      <h1 class="glow">Akhila</h1>
+    </div>
+    <script src="./jquery-3.5.1.js"></script>
+    <script>
+      function hidepre() {
+        $('.loading').hide();
+      }
+      $(document).ready(() => {
+        $("#wishes").hide();
+        $("i").click(() => {
+          $("i").hide();
+          $("#wishes").show();
+          x = Math.floor(Math.random() * 2) + 1;
+          new Audio(x + ".mp3").play();
+        });
+      });
+    </script>
+  </body>
+</html>
